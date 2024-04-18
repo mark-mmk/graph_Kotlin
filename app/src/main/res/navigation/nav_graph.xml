@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/frame1">
+
+    <fragment
+        android:id="@+id/frame1"
+        android:name="com.example.graph.frame1"
+        android:label="fragment_frame1"
+        tools:layout="@layout/fragment_frame1">
+        <action
+            android:id="@+id/action_frame1_to_frame2"
+            app:destination="@id/frame2" />
+    </fragment>
+    <fragment
+        android:id="@+id/frame2"
+        android:name="com.example.graph.frame2"
+        android:label="fragment_frame2"
+        tools:layout="@layout/fragment_frame2">
+        <argument
+            android:name="text"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_frame2_to_frame1"
+            app:destination="@id/frame1" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/frame3"
+        android:name="com.example.graph.frame3"
+        android:label="fragment_frame3"
+        tools:layout="@layout/fragment_frame3" />
+</navigation>
